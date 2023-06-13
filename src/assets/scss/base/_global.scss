@@ -1,0 +1,55 @@
+html {
+  // font-size: 10px;
+}
+
+// Body & Locked
+body {
+  font-family: $fontMain;
+  line-height: 1;
+  //  background-color: $black;
+  &.locked {
+    overflow: hidden;
+  }
+  // Dark mode styles
+  &.dark {
+    background: #242424;
+  }
+}
+
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  // Mobile
+
+  @media screen and (min-width: $breakpoint480) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: $breakpoint768) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: $breakpoint1200) {
+    max-width: 1200px;
+  }
+
+  // Desktop
+
+  // @media (max-width: $breakpoint1450) {
+  //     max-width: 1200px;
+  // }
+
+  // @media (max-width: $breakpoint992) {
+  //     max-width: 970px;
+  // }
+
+  // @media (max-width: $breakpoint768) {
+  //     max-width: 740px;
+  // }
+
+  // @media (max-width: $breakpoint480) {
+  //     max-width: none;
+  // }
+}

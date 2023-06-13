@@ -1,0 +1,41 @@
+// Container & Breakpoints
+@use "sass:math";
+$containerWidth: 1200;
+$containerPadding: 30;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint1200: 1199.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+$breakpoint320: 320 + px;
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$primeryColor: $black;
+
+$accentColor: red;
+
+// Transition
+
+$cubicBezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Fonts
+
+$systemFonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$fontMain: $systemFonts;
+$fontSecondary: "";
+$fontAccent: "";
+
+// Z-Index
+
+$zHeaderIndex: 10;
+
+// Burger Menu
+// $burgerBreakpoint: $breakpoint992;
+// $burgerColor: #131418;
+// $burgerActiveColor: #fefefe;

@@ -1,0 +1,102 @@
+// Header Styles
+header {
+  background-color: teal;
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: $zHeaderIndex;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+// Menu Styles
+
+.logo {
+  color: $white;
+}
+
+.menu {
+  display: flex;
+  column-gap: 30px;
+}
+
+.menu-link {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  transition: color 300ms $cubicBezier;
+
+  &:hover {
+    color: $accentColor;
+  }
+  &:focus {
+    color: $accentColor;
+    padding: 10px 4px;
+  }
+}
+
+// Mobile menu styles
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 30px 48px 30px;
+  background-color: #fff;
+  z-index: 10;
+  display: none;
+}
+
+.container--burger {
+  margin: 0;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.burger.is-hidden {
+  display: block;
+}
+// Burger
+
+.burger-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &--open {
+    margin-left: auto;
+    @include tablet {
+      display: none;
+    }
+  }
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    fill: #212121;
+    opacity: 0.4;
+    &:hover,
+    &:focus {
+      fill: red;
+    }
+  }
+}
